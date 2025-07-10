@@ -1,0 +1,27 @@
+# repos:
+# - repo: https://github.com/antonbabenko/pre-commit-terraform
+#   rev: v1.89.1
+#   hooks:
+#     - id: terraform_fmt
+#     - id: terraform_docs
+#     - id: terraform_tflint
+#       args:
+#         - --args=--minimum-failure-severity=error
+#     - id: terraform_trivy
+#       args:
+#         - --args=--severity=CRITICAL
+#         - --args=--tf-exclude-downloaded-modules=true
+# - repo: local
+#   hooks:
+#     - id: check-okta-group-rule-quotes
+#       name: Check for Unescaped Quotes in Okta Group Rules
+#       entry: bash .git-hooks/check_okta_group_rule_quotes.sh
+#       language: system
+#       types: [text]
+#       files: \.tf$
+#     - id: api-key-check
+#       name: API Key Detector
+#       entry: bash .git-hooks/pre-commit-api-key.sh
+#       language: system
+#       pass_filenames: true
+#       types: [text]

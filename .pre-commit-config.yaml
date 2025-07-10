@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: api-key-check
+        name: API Key Detector
+        entry: bash .git-hooks/pre-commit-api-key.sh
+        language: system
+        pass_filenames: true
+        types: [text]
