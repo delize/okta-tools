@@ -1,5 +1,7 @@
 # Okta Terraform Tools
 
+![](dalle_generated-okta-tools.png)
+
 This repository contains a collection of Python-based tools for generating Terraform configuration from Okta API data. These tools help automate the process of importing and managing Okta resources in Terraform. They are especially useful for organizations that have a large amount of data they would like to import into Terraform and would prefer to not do certain aspects by hand (for example, writing all groups and group rules into Terraform).
 
 
